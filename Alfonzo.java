@@ -16,7 +16,7 @@ public class Alfonzo {
         loi.nextLine();
         int contador = 1;
         total =0;
-        
+
         // Aqui empieza el ciclo.
         while (contador <= cantidadProductos) {
             System.out.println("que producto desea comprar?");
@@ -31,6 +31,15 @@ public class Alfonzo {
             }else if (costoProducto>50000){
                 System.out.println("Categoria Alta");
                 contCategoriaAlta++;
-            }
+                // Aqui se suma el total 
+            total += costoProducto;
+           contador++; 
+           
+        }// aqui se saca el porcentaje
+        System.out.println("El costo promedio de los productos ingresados en el lote es de: " + total/cantidadProductos);
+        System.out.println("Productos de categoria alta: "+ contCategoriaAlta);
     }
+
+    }
+
 }
